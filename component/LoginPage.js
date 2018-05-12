@@ -36,7 +36,7 @@ export default class App extends React.Component {
 				<View style={styles.loginFooter}>
 					<View style={styles.info}>
 						<View style={{height:this.state.hgh,backgroundColor:'blue'}}>
-							<Text>loremipsum dolor sit amet</Text>
+							<Text>loremipsum dolor sit ametttt</Text>
 						</View>
 						<TouchableHighlight style={styles.btn} onPress={this.infoView} underlayColor="white">
 							<View>
@@ -44,7 +44,7 @@ export default class App extends React.Component {
 							</View>
 						</TouchableHighlight>
 					</View>
-          <Text>({this.state.hgh}) Changes you make will automatically reload.</Text>
+          <Text>({this.state.hgh})Any changes you make will automatically reload.</Text>
           <Text>Shake your phone to open the developer menu.</Text>
 					
 				</View>
