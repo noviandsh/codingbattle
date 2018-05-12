@@ -4,7 +4,7 @@ import {
   Text, 
   View 
 } from 'react-native';
-import LoginPage from './LoginPage';
+import LoginPage from './component/LoginPage';
 
 export default class App extends React.Component {
   render() {
