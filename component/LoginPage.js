@@ -36,7 +36,7 @@ export default class App extends React.Component {
 				<View style={styles.loginFooter}>
 					<View style={styles.info}>
 						<View style={{height:this.state.hgh,backgroundColor:'blue'}}>
-							<Text>loremipsum dolor sit ametttt</Text>
+							<Text>loremipsum dolor sit ametttt nyuwun sewu</Text>
 						</View>
 						<TouchableHighlight style={styles.btn} onPress={this.infoView} underlayColor="white">
 							<View>
