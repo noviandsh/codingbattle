@@ -9,17 +9,18 @@ import {
 		UIManager,
 		TouchableHighlight
 } from 'react-native';
+import Form from './components/Form.js';
 
 export default class App extends React.Component {
 	constructor(){
 		super();
 		UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
-		this.state = {a:false,hgh:10}
+		this.state = {a:false,hgh:0}
   }
 	infoView = () => {
 		LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
 		this.setState({
-			hgh: this.state.a ? 10 : 200,
+			hgh: this.state.a ? 0 : 200,
 			a: this.state.a ? false : true
 		});
 	}
@@ -34,19 +35,15 @@ export default class App extends React.Component {
 					<View style={styles.rightLogo} ></View>
 				</View>
 				<View style={styles.loginFooter}>
-					<View style={styles.info}>
-						<View style={{height:this.state.hgh,backgroundColor:'blue'}}>
-							<Text>loremipsum dolor sit ametttt</Text>
-						</View>
-						<TouchableHighlight style={styles.btn} onPress={this.infoView} underlayColor="white">
-							<View>
-								<Text>v</Text>
-							</View>
-						</TouchableHighlight>
+					<View style={{height:this.state.hgh,backgroundColor:'blue'}}>
+						<Text>loremipsum dolor sit ametttt</Text>
 					</View>
-          <Text>({this.state.hgh})Any changes you make will automatically reload.</Text>
-          <Text>Shake your phone to open the developer menu.</Text>
-					
+					<TouchableHighlight style={styles.btn} onPress={this.infoView} underlayColor="white">
+						<View>
+							<Text>v</Text>
+						</View>
+					</TouchableHighlight>
+					<Form />
 				</View>
       </View>
     );
@@ -57,10 +54,10 @@ const styles = StyleSheet.create({
 	info:{
 		borderColor: 'purple',
 		borderWidth: 0.5,
+		alignItems: 'center'
 	},
   loginContainer: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'stretch',
 		justifyContent: 'space-between'
   },
@@ -68,8 +65,6 @@ const styles = StyleSheet.create({
 		flex: 2,
 		flexDirection: 'row',
 		alignItems: 'center',
-		borderWidth: 0.5,
-		borderColor: '#eee'
 	},
 	logo: {
 		width: 150, 
@@ -92,16 +87,18 @@ const styles = StyleSheet.create({
 		backgroundColor: '#CE93D8'
 	},
 	btn: {
-		borderRadius: 100,
+		borderBottomLeftRadius: 90,
+		borderBottomRightRadius: 90,
+		// borderRadius: 100,
 		backgroundColor: 'red',
 		width: 30,
-		height: 30,
+		height: 15,
 		alignItems: 'center',
-		position: 'relative',
-		bottom: 10
+		// position: 'relative',
+		// bottom: 10
 	},
   loginFooter: {
 		flex: 4,
-    backgroundColor: '#fff'
+		alignItems: 'stretch',
   }
 });

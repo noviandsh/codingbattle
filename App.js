@@ -2,16 +2,19 @@ import React from 'react';
 import { 
   StyleSheet, 
   Text, 
-  View 
+  View,
+  ImageBackground
 } from 'react-native';
-import LoginPage from './component/LoginPage';
+import LoginPage from './src/LoginPage';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <LoginPage />
-      </View>
+      <ImageBackground source={require('./assets/images/bg.jpg')} blurRadius={0.5} style={styles.container}>
+        <View style={styles.transBg}>
+          <LoginPage />
+        </View>
+      </ImageBackground>
     );
   }
 }
@@ -19,6 +22,9 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
   },
+  transBg: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 1, 51, 0.75)',
+  }
 });
