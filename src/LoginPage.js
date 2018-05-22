@@ -35,8 +35,20 @@ export default class App extends React.Component {
 					<View style={styles.rightLogo} ></View>
 				</View>
 				<View style={styles.loginFooter}>
+<<<<<<< HEAD:src/LoginPage.js
 					<View style={{height:this.state.hgh,backgroundColor:'blue'}}>
 						<Text>loremipsum dolor sit ametttt</Text>
+=======
+					<View style={styles.info}>
+						<View style={{height:this.state.hgh,backgroundColor:'blue'}}>
+							<Text>loremipsum dolor sit ametttt nyuwun sewu</Text>
+						</View>
+						<TouchableHighlight style={styles.btn} onPress={this.infoView} underlayColor="white">
+							<View>
+								<Text>v</Text>
+							</View>
+						</TouchableHighlight>
+>>>>>>> 0c446640c78b43decdf357f60a32f77cc4d356ac:component/LoginPage.js
 					</View>
 					<TouchableHighlight style={styles.btn} onPress={this.infoView} underlayColor="white">
 						<View>
